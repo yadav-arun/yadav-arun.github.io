@@ -1,0 +1,88 @@
+<style media="screen">
+.green{
+  color: green;
+}
+.red{
+  color: red;
+}
+.list-group-item:hover{
+  background: #efefef;
+}
+.gly-spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+</style>
+
+<div class="col-xs-12 col-sm-12 col-md-12 content-column">
+  <div class="col-md-12 col-xs-12 col-sm-12 ">
+
+    <div class="col-md-12 col-xs-12 xs-mt-30 xs-mb-20 xs-pt-10 xs-pb-10" style="background:#3a4f5f; border-radius:4px;">
+      <div class="col-md-2 col-xs-12">
+        <h4 style="margin:0px;color:white;">Overview Dashboard</h4>
+      </div>
+      <div class="pull-right col-md-4 col-xs-12 xs-mt-10 sm-mt-0">
+        <select chosen ng-model="data.selectedType" data-placeholder="Select an option" ng-change="changeInConfig()" ng-options="item[0] as item[1] for item in data.codesList" style="width:100% !important; color: black;">
+          <option value="" label="Seloect an option" disabled>Select an Option</option>
+        </select>
+
+      </div>
+      <div class="pull-right hidden-xs">
+        <i ng-show="loading" style="color:white; margin-right:20px;" class="glyphicon glyphicon-refresh gly-spin"></i>
+        <label style="color:white;">Select a code</label>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="col-lg-12 col-xs-12 xs-mb-10 xs-pl-0 xs-pr-0">
+    <div class="col-lg-6 col-xs-12 xs-mb-10 xs-pl-0 xs-pr-0">
+
+    </div>
+  </div>
+  <div class="col-lg-12 col-xs-12 xs-mb-10 xs-pl-0 xs-pr-0">
+    <div class="col-lg-8 col-xs-12 xs-mb-10 ">
+      <div id="container" style="height: 500px;"></div>
+    </div>
+    <div class="col-lg-4 col-xs-12 xs-mb-10 ">
+      <div ng-show="recentQuotes.length == 0">
+        <h3 class="text-center">Select any from the above list</h3>
+      </div>
+      <div ng-show="recentQuotes.length > 0">
+        <h2 class="text-center">Recent Quotes</h2>
+        <div class="list-group col-md-12" style="height: 430px; overflow-y: scroll;">
+          <span class="list-group-item col-md-12" ng-repeat="item in recentQuotes track by $index" style="background-color: {{item.checked ? '#e3e3e3' : 'transparent'}}">
+            <span class="col-md-11 xs-pl-0 xs-pr-0" >
+              <input  class="col-md-1" ng-disabled="!item.checked && maxReached" type="checkbox" ng-change="changeInSelected(item.name,item.checked, $index)" ng-model="item.checked" value="{{item.name}}">
+              <span class="col-md-11 xs-pl-0 xs-pr-0" style="cursor:pointer;"  ng-click="selectOne($index)">
+                <span class="col-md-8">
+                  <span>{{item.name}}</span>
+                </span>
+                <span class="col-md-4">
+                  <h4 class="xs-mt-0"><strong>{{item.latestClose}}</strong></h4>
+                  <small class="{{item.change > 0 ? 'green' : 'red'}} xs-mb-0"> <span class="glyphicon glyphicon-arrow-{{item.change > 0 ? 'up' : 'down'}}" aria-hidden="true"></span> {{item.change}} %</small>
+                </span>
+              </span>
+            </span>
+            <button ng-click="deleteItem($index)" type="button" class="close pull-right col-md-1">
+              <span>&times;</span>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,16 @@
+{
+  "name": "IPL Project",
+  "short_name": "IPL Project",
+  "start_url": ".",
+  "author": "Arun Yadav",
+  "display": "fullscreen",
+  "theme_color": "#1B5682",
+"offline_enabled": true,
+ "background_color": "#1B5682",
+  "description": "A Project to display ipl stats, build on AngularJs only",
+  "icons": [{
+    "src": "data/icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}

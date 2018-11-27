@@ -1,0 +1,32 @@
+<style media="screen">
+  .active a{
+    background-color: #585858 !important;
+  }
+  #sidebar{
+    height: 90vh;
+  }
+  #header{
+    height: 10vh;
+  }
+  a{
+    color: white;
+    cursor: pointer;
+  }
+</style>
+<section ng-include="'views/header.html'" id="header"  style="background-color: #2196f3;"></section>
+
+  <div id="sidebar" class="col-xs-1 col-sm-4 col-md-2 xs-pt-40" style="background:#7c7c7c">
+    <div class="sidebar-content">
+
+      <ul class="nav nav-pills nav-stacked">
+        <li ng-class="{'active' : $state.current.name == 'dashboard.home'}"><a ui-sref="dashboard.home">Overview</a></li>
+        <li ng-class="{'active' : $state.current.name == 'dashboard.others'}"><a>Other Screen Options</a></li>
+      </ul>
+    </div>
+  </div>
+
+<div class="view-container col-xs-11 col-sm-8 col-md-10" ui-view-container>
+  <div class="row row-offcanvas row-offcanvas-left {{activeClass}}">
+  <main ui-view id="content"  autoscroll="false"></main>
+</div>
+</div>

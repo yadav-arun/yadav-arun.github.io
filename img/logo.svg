@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <style>
+    <!-- @font-face {
+        font-family: font;
+        src: url(font.woff);
+    } -->
+		@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700,900");
+
+    svg{
+
+        font-family: 'Nunito', sans-serif;
+    }
+</style>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="402" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse ry="199.5" rx="200.5" id="svg_3" cy="200" cx="200" stroke-width="0" stroke="#000" fill="#333333"/>
+  <text stroke="#000" transform="matrix(1.092604386324227,0,0,1.333535431727284,5.715852223837032,-43.95544425855723) " font-style="normal" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Nunito', sans-serif" font-size="150" id="svg_4" y="220" x="55" stroke-width="0" fill="#BBBBBB">A Y</text>
+ </g>
+</svg>

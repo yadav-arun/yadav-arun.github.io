@@ -1,0 +1,6 @@
+<div id="sidebar-wrap" ng-controller="NavCtrl">
+  <accordion close-others="oneAtTime" slimscroll="{height: '100%'}">
+    <div is-open="status.isFirstOpen" style="margin:0 auto;padding:10px;" ng-class="{'open': status.isFirstOpen, 'closed': !status.isFirstOpen}" compile-html="navigationview">
+    </div>
+  </accordion>
+</div>

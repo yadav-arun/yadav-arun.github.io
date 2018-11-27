@@ -1,0 +1,33 @@
+{
+	"companies": [{
+			"name": "Flipkart",
+			"description": "Flipkart is an online shopping destination for electronics, books, music, and movies",
+			"location": "Bengaluru",
+			"website": "www.flipkart.com",
+			"market": ["e-commerce", "fashion", "data as a service"],
+			"employees": 1000,
+			"stage": "Pre Series A",
+			"founders": ["Sachin Bansal", "Binny Bansal"]
+		},
+    {
+        "name": "Snapdeal",
+        "description": "Snapdeal is an Indian e-commerce company based in New Delhi, India. ",
+        "location": "Delhi",
+        "website": "www.snnapdeal.com",
+        "market": ["shopping", "electronics"],
+        "employees": 750,
+        "stage": "Series A",
+        "founders": ["Kunal Bahl", "Rohit Bansal"]
+      },
+      {
+          "name": "Amazon",
+          "description": "Amazon is an electronic commerce and cloud computing company, founded on July 5, 1994 ",
+          "location": "USA",
+          "website": "www.amazon.com",
+          "market": ["e-commerce", "shopping", "cloud"],
+          "employees": 6500,
+          "stage": "Series B",
+          "founders": ["Jeff Bezos"]
+        }
+	]
+}

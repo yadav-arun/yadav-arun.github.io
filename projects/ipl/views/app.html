@@ -1,0 +1,16 @@
+
+  <!-- <div id="sidebar" class="col-xs-1 col-sm-4 col-md-1 sidebar-offcanvas xs-pt-40">
+    <div class="sidebar-content">
+
+      <ul class="nav nav-pills nav-stacked">
+        <li ng-class="{'active' : $state.current.name == 'dashboard.home'}"><a ui-sref="dashboard.home">Overview</a></li>
+        <li ng-class="{'active' : $state.current.name == 'dashboard.indepth'}"><a ui-sref="dashboard.indepth">Indepth</a></li>
+      </ul>
+    </div>
+  </div> -->
+
+<div class="view-container col-xs-12 col-sm-12 col-md-12" ui-view-container>
+  <div class="row row-offcanvas row-offcanvas-left {{activeClass}}">
+  <main ui-view id="content"  autoscroll="false"></main>
+</div>
+</div>

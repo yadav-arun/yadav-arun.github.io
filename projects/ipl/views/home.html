@@ -1,0 +1,290 @@
+<style media="screen">
+   /*svg{
+   height: 330px;
+   }*/
+   .table-responsive{
+   overflow-x: visible !important;
+   }
+</style>
+<div class="col-xs-12 col-sm-12 col-md-12 content-column">
+  <div class="col-md-12 col-xs-12 col-sm-12 ">
+
+   <div class="col-md-12 col-xs-12 xs-mt-30 xs-mb-20 xs-pt-10 xs-pb-10" style="background:#3a4f5f; color:white;border-radius:4px;">
+      <div class="col-md-2 col-xs-12">
+         <h4 style="margin:0px;">Overview Dashboard</h4>
+      </div>
+      <div class="pull-right col-md-2 col-xs-12 xs-mt-10 sm-mt-0">
+         <select aria-label="menu" class="col-md-12 col-xs-12" ng-model="data.selectedYear" ng-init="data.selectedYear = data.yearListVisible[0]" ng-options="item for item in data.yearListVisible" ng-change="changeInYear();" style="color:black;">
+            <option value="-1" disabled="">Select An Year</option>
+         </select>
+      </div>
+<div class="pull-right hidden-xs">
+  <label>Select an year</label>
+</div>
+
+
+   </div>
+   </div>
+   <!-- <div class="grid"> -->
+   <div class="col-lg-12 col-xs-12 xs-mb-10 xs-pl-0 xs-pr-0">
+      <div class="col-md-3 col-sm-6 col-xs-12 xs-mb-10">
+         <div class="xs-p-30" style="background:#e05d6f; color:white;">
+            <h3><strong>{{data.selectedYear == "ALL" ? "Last Year Winner" : "Winner Team"}}</strong></h3>
+            <h4>{{data.selectedYear == "ALL" ? data.yearWiseFinalWinner[data.yearList[data.yearList.length-1]] : data.yearWiseFinalWinner[data.selectedYear]}}</h4>
+         </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 xs-mb-10">
+         <div class="xs-p-30" style="background:#16a085 !important; color:white;">
+            <h3><strong>Total Runs</strong></h3>
+            <h4>{{data.runsYearWise[data.selectedYear]}}</h4>
+         </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 xs-mb-10">
+         <div class="xs-p-30" style="background:#418bca !important; color:white;">
+            <h3><strong>Total Wickets</strong></h3>
+            <h4>{{data.wicketsYearWise[data.selectedYear]}}</h4>
+         </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 xs-mb-10">
+         <div class="xs-pb-20 xs-pt-30 xs-pl-30 xs-pr-30" style="background:#3f4e62 !important; color:white;">
+            <h3><strong>Max Boundries</strong></h3>
+            <h5 class="xs-mt-0">4's - {{data.maximumFoursPlayer}} Fours</h5>
+            <h5 class="xs-mb-0">6's - {{data.maximumSixesPlayer}} Sixes</h5>
+         </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 xs-mb-10">
+         <div class="xs-p-30" style="background:#3f4e62 !important; color:white;">
+            <h3><strong>Total Venues</strong></h3>
+            <h4>{{data.totalVenues}}</h4>
+         </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 col-sm-6 col-xs-12 xs-mb-10">
+         <div class="xs-p-30" style="background:#418bca !important; color:white;">
+            <h3><strong>Total Cities</strong></h3>
+            <h4>{{data.totalCities}}</h4>
+         </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 xs-mb-10">
+         <div class="xs-p-30" style="background:#16a085 !important; color:white;">
+            <h3><strong>Total Balls Bowled</strong></h3>
+            <h4>{{data.ballsYearWise[data.selectedYear]}}</h4>
+         </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 xs-mb-10">
+         <div class="xs-p-30" style="background:#e05d6f !important; color:white;">
+            <h3><strong>Overall Strike Rate</strong></h3>
+            <h4>{{(data.runsYearWise[data.selectedYear]*100/data.ballsYearWise[data.selectedYear] | number : 2) || 0}}</h4>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-12 col-sm-12 col-xs-12 xs-pb-30 xs-pl-0 xs-pr-0">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+         <div class="col-md-12 col-sm-12 col-xs-12 xs-mb-20 xs-pt-10 xs-pb-10" style="background:#3a4f5f; color:white;border-radius:4px;">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+               <h4 style="margin:0px;">Cities Where Played</h4>
+            </div>
+         </div>
+         <div
+            class="col-md-12 col-xs-12 col-sm-12 xs-pl-0 xs-pr-0"
+            bar-chart
+            bar-data='data.citiesChartData'
+            bar-x='value'
+            bar-y='["key"]'
+            bar-labels='["Number of Matches"]'
+            bar-colors='["#418bca", "#c7254e"]'
+            bar-resize="true"
+            style="height:280px;">
+         </div>
+      </div>
+      <div class="col-md-6 col-xs-12 col-sm-12">
+         <div class="col-md-12 col-xs-12 col-sm-12 xs-mb-20 xs-pt-10 xs-pb-10" style="background:#3a4f5f; color:white;border-radius:4px;">
+            <div class="col-md-12 col-xs-12 col-sm-12">
+               <h4 style="margin:0px;">Venues Where Played</h4>
+            </div>
+         </div>
+         <div
+            class="col-md-12 col-xs-12 col-sm-12 xs-pl-0 xs-pr-0"
+            bar-chart
+            bar-data='data.venuesChartData'
+            bar-x='value'
+            bar-y='["key"]'
+            bar-labels='["Number of Matches"]'
+            bar-colors='["#418bca", "#c7254e"]'
+            bar-resize="true"
+            style="height:280px;">
+         </div>
+      </div>
+   </div>
+   <div class="col-md-12 col-sm-12 col-xs-12 xs-pb-30 xs-pl-0 xs-pr-0">
+      <div class="col-md-3 col-xs-12 col-sm-6">
+         <div class="col-md-12 col-xs-12 col-sm-12 xs-mb-20 xs-pt-10 xs-pb-10" style="background:#3a4f5f; color:white;border-radius:4px;">
+            <div class="col-md-12 col-xs-12 col-sm-12">
+               <h4 style="margin:0px;">No Balls per Bowler</h4>
+            </div>
+         </div>
+         <div class="table-responsive col-md-12 col-xs-12 col-sm-12">
+            <table datatable="ng" dt-options="option.dtOptionsNoBalls" dt-column-defs="option.dtColumnDefsNoBalls" class="table table-hover" width="100%">
+               <thead>
+                  <tr>
+                     <th style='text-align:center;'>No Balls </th>
+                     <th style='text-align:center;'>Bowler</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr ng-repeat="(key,value) in data.noBallsData[data.selectedYear]">
+                     <td align='center'>{{value}}</td>
+                     <td align='center'>{{key}}</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <div class="col-md-3 col-xs-12 col-sm-6">
+         <div class="col-md-12 col-xs-12 col-sm-12 xs-mb-20 xs-pt-10 xs-pb-10" style="background:#3a4f5f; color:white;border-radius:4px;">
+            <div class="col-md-12 col-xs-12 col-sm-12">
+               <h4 style="margin:0px;">Runs per Batsman</h4>
+            </div>
+         </div>
+         <div class="table-responsive col-md-12 col-xs-12 col-sm-12">
+            <table datatable="ng" dt-options="option.dtOptionsNoBalls" dt-column-defs="option.dtColumnDefsNoBalls" class="table table-hover" width="100%">
+               <thead>
+                  <tr>
+                     <th style='text-align:center;'>Runs</th>
+                     <th style='text-align:center;'>Batsman</th>
+                     <th style='text-align:center;'>Strike Rate</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr ng-repeat="(key,value) in data.individualPlayerRunData[data.selectedYear]">
+                     <td align='center'>{{value}}</td>
+                     <td align='center'>{{key}}</td>
+                     <td align='center'>{{value *100/data.individualPlayerBallsPlayedData[data.selectedYear][key]}}</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <div class="col-md-3 col-xs-12 col-sm-6">
+         <div class="col-md-12 col-xs-12 col-sm-12 xs-mb-20 xs-pt-10 xs-pb-10" style="background:#3a4f5f; color:white;border-radius:4px;">
+            <div class="col-md-12 col-xs-12 col-sm-12">
+               <h4 style="margin:0px;">Fours per Batsman</h4>
+            </div>
+         </div>
+         <div class="table-responsive col-md-12 col-xs-12 col-sm-12">
+            <table datatable="ng" dt-options="option.dtOptionsNoBalls" dt-column-defs="option.dtColumnDefsNoBalls" class="table table-hover" width="100%">
+               <thead>
+                  <tr>
+                     <th style='text-align:center;'>Fours</th>
+                     <th style='text-align:center;'>Batsman</th>
+                     <th style='text-align:center;'>% of runs scored by 4's</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr ng-repeat="(key,value) in data.maximumFours[data.selectedYear]">
+                     <td align='center'>{{value}}</td>
+                     <td align='center'>{{key}}</td>
+                     <td align='center'>{{value *100/data.individualPlayerRunData[data.selectedYear][key]}}</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <div class="col-md-3 col-xs-12 col-sm-6">
+         <div class="col-md-12 col-xs-12 col-sm-12 xs-mb-20 xs-pt-10 xs-pb-10" style="background:#3a4f5f; color:white;border-radius:4px;">
+            <div class="col-md-12 col-xs-12 col-sm-12">
+               <h4 style="margin:0px;">Sixes per Batsman</h4>
+            </div>
+         </div>
+         <div class="table-responsive col-md-12 col-xs-12 col-sm-12">
+            <table datatable="ng" dt-options="option.dtOptionsNoBalls" dt-column-defs="option.dtColumnDefsNoBalls" class="table table-hover" width="100%">
+               <thead>
+                  <tr>
+                     <th style='text-align:center;'>Runs</th>
+                     <th style='text-align:center;'>Batsman</th>
+                     <th style='text-align:center;'>% of runs scored by 4's</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr ng-repeat="(key,value) in data.maximumSixes[data.selectedYear]">
+                     <td align='center'>{{value}}</td>
+                     <td align='center'>{{key}}</td>
+                     <td align='center'>{{value *100/data.individualPlayerRunData[data.selectedYear][key]}}</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-12 col-sm-12 col-xs-12 xs-pb-30 xs-pl-0 xs-pr-0">
+      <div class="col-md-6 col-xs-12 col-sm-12">
+         <div class="col-md-12 col-xs-12 col-sm-12 xs-mb-20 xs-pt-10 xs-pb-10" style="background:#3a4f5f; color:white;border-radius:4px;">
+            <div class="col-md-12 col-xs-12 col-sm-12">
+               <h4 style="margin:0px;">Team Matches Wins</h4>
+            </div>
+         </div>
+         <div class="col-md-12 col-xs-12 col-sm-12">
+            <p ng-show="data.displayMatchWonUniqueData">{{data.displayMatchWonUniqueString}}</p>
+         </div>
+         <div
+            class="col-md-12 col-xs-12 col-sm-12 xs-pl-0 xs-pr-0"
+            bar-chart
+            bar-data='data.matchWinnerChartData'
+            bar-x='value'
+            bar-y='["key"]'
+            bar-labels='["Matches won"]'
+            bar-colors='["#00A000"]'
+            bar-resize="true"
+            style="height:280px;">
+         </div>
+      </div>
+      <div class="col-md-6 col-xs-12 col-sm-12">
+         <div class="col-md-12 col-xs-12 col-sm-12 xs-mb-20 xs-pt-10 xs-pb-10" style="background:#3a4f5f; color:white;border-radius:4px;">
+            <div class="col-md-6 col-xs-12 col-sm-12">
+               <h4 style="margin:0px;">Toss Winner effect on result</h4>
+            </div>
+         </div>
+         <div
+            class="col-md-12 col-xs-12 col-sm-12"
+            donut-chart
+            donut-data='data.TossDecisionChartData'
+            donut-resize="true"
+            donut-colors='["#00A000","#A00000"]'
+            style="height:280px;">
+         </div>
+      </div>
+   </div>
+   <div class="col-md-12 col-sm-12 col-xs-12 xs-pb-30 xs-pl-0 xs-pr-0">
+      <div class="col-md-12 col-xs-12 col-sm-12 xs-mb-20 xs-pt-10 xs-pb-10" style="background:#3a4f5f; color:white;border-radius:4px;">
+         <div class="col-md-12 col-xs-12 col-sm-12">
+            <h4 style="margin:0px;">Big Wins - 100+ runs or 10 wicket win</h4>
+         </div>
+      </div>
+      <div class="col-md-12 col-xs-12 col-sm-12 text-center" ng-hide="data.bigMarginWinMatches[data.selectedYear].length">
+         No Big Win this year
+      </div>
+      <div class="table-responsive col-md-12 col-xs-12 col-sm-12" ng-show="data.bigMarginWinMatches[data.selectedYear].length">
+         <table datatable="ng" dt-options="option.dtOptions" dt-column-defs="option.dtColumnDefs" class="table table-hover" width="100%">
+            <thead>
+               <tr>
+                  <th style='text-align:center;'>Winner Team </th>
+                  <th style='text-align:center;'>Losing Team</th>
+                  <th style='text-align:center;'>Win by</th>
+                  <th style='text-align:center;'>Match Played on</th>
+                  <th style='text-align:center;'>PLayed at</th>
+                  <th style='text-align:center;'>Man of Match</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr ng-repeat="item in data.bigMarginWinMatches[data.selectedYear]">
+                  <td align='center'>{{item.winner}}</td>
+                  <td align='center'>{{item.winner == item.team1 ? item.team2 : item.team1}}</td>
+                  <td align='center'>{{item.win_by_wickets != 10 ? item.win_by_runs + ' Runs': item.win_by_wickets + ' Wickets'}}</td>
+                  <td align="center"> {{item.date}}</td>
+                  <td align='center'>{{item.venue}}, {{item.city}}</td>
+                  <td align="center"> {{item.player_of_match}}</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</div>

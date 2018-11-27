@@ -1,0 +1,98 @@
+<html>
+<!-- Head Start -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1B5682">
+    <meta name="msapplication-navbutton-color" content="#1B5682">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1B5682">
+
+    <title>Inc42 Coding Challenge</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <style media="screen">
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: 'Raleway', sans-serif !important;
+        }
+    </style>
+</head>
+<!-- Head End -->
+
+<!-- Body Start -->
+<body ng-app="TableApp" ng-controller="mainCtrl">
+
+    <div class="col-xs-12 text-center bg-primary" style="height:15vh;">
+        <h1 class="xs-m-40">INC42 Coding Challenge</h1>
+    </div>
+    <div class="col-xs-12  bg-default" style="height:85vh;">
+
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12 xs-mt-40">
+            <div class="col-md-4 col-sm-4 pull-right">
+                <div class="dropdown pull-right">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="border:0px;">
+                        <span class="xs-p-0">Customise Columns</span>
+                        <span class="glyphicon glyphicon-cog"></span>
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="item in options" class="xs-p-5">
+                            <input type="checkbox" ng-checked="item.selected" ng-disabled="(selected.length < 5 && item.selected)" ng-model="item.selected" ng-change="changeInSelected($index, item.selected, item.name);" id="{{item.name}}">
+                            <label for="{{item.name}}" class="xs-pl-10" style="text-transform: capitalize;">{{item.name}}</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-sm-2 pull-right">
+                <span class="xs-mt-5 glyphicon glyphicon-circle-arrow-right pull-right" style="font-size:24px; cursor:pointer;" ng-hide="(visible[visible.length-1] == selected[selected.length-1]) && leftIndex == selected.length-4" ng-click="shiftRight();"></span>
+                <span class="xs-mt-5 glyphicon glyphicon-circle-arrow-left pull-left" style="font-size:24px; cursor:pointer;" ng-hide="(visible[0] == selected[0]) && leftIndex == 0" ng-click="shiftLeft();"></span>
+            </div>
+            <div class="col-lg-12 col-xs-12 xs-mb-10 xs-mt-40 text-center">
+
+                <div class="col-md-12">
+                    <div class="row bg-accent" style="font-weight:700;    border-radius: 5px 5px 0px 0px;">
+                        <div class="col-md-3 col-sm-3 col-xs-6 xs-p-0">
+                            <div class="xs-p-10 text-left xs-pl-20">
+                                Company
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-6 xs-p-0">
+                            <div ng-repeat="show in visible" ng-if="visible.indexOf(show) > -1" class="col-md-3 col-sm-3 col-xs-12 xs-p-10" style="text-transform: capitalize;">{{show}}</div>
+                        </div>
+                    </div>
+
+                    <div class="row flex" ng-repeat="item in Users" style="border-bottom : 1.5px solid #e9f0ef">
+                        <div class="col-md-3 col-sm-3 col-xs-6 xs-p-0 text-left" style="border-left:2px solid #c8c9ca; border-right:2px solid #c8c9ca;background-color: #f6f7f9;">
+                            <div class="xs-p-20">
+                                <h4 class="xs-m-0"><strong>{{item.name}}</strong></h4>
+                                <h6 class="xs-mb-0 xs-mt-5">{{item.description}}</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-6 xs-p-0" style="border-right:2px solid #c8c9ca;">
+                            <div ng-repeat="show in visible" ng-if="visible.indexOf(show) > -1" class="col-md-3 col-sm-3 col-xs-12 xs-p-20">
+                                <span ng-hide="show == 'website'">{{(show=='market' || show=='founders') ? (item[show]).join(", ") : item[show]}}</span>
+                                <span ng-show="show == 'website'"><a href="http://{{item[show]}}" target="_blank">{{item[show]}}</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script type="text/javascript">
+    $('.dropdown-toggle').on('click', function (event) {
+      $('.dropdown').toggleClass('open');
+    });
+    </script>
+</body>
+<!-- Body End -->
+
+</html>

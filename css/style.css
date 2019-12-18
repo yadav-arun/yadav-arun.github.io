@@ -111,6 +111,11 @@ i {
 	background: #3eaedf;
 }
 
+.simplilearn {
+	/* background: #f9ac2e; */
+	background: linear-gradient(140deg, rgba(249,172,46,1) 0%, rgba(249,172,46,1) 54%, rgba(38,167,223,1) 54%, rgba(38,167,223,1) 100%);
+}
+
 .company_name {
 	color: #fff;
 	font-weight: 400;

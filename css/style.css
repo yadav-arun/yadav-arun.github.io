@@ -10,6 +10,52 @@
 	background: #273b48;
 }
 
+
+#main-cursor {
+  background-color: white;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  pointer-events: none;
+  position: absolute;
+  z-index: 9998;
+  mix-blend-mode: difference;
+
+}
+
+
+#main-cursor {
+  background-color: white;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  pointer-events: none;
+  position: absolute;
+  z-index: 99998;
+  mix-blend-mode: difference;
+
+}
+
+#follow-cursor {
+	border: 2px solid white;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	transition: all 0.15s ease, left 0.3s linear, top 0.3s linear;
+	pointer-events: none;
+	position: absolute;
+	z-index: 99999;
+  mix-blend-mode: difference;
+
+}
+#follow-cursor.is-active {
+  -webkit-transform: scale(4);
+          transform: scale(4);
+  mix-blend-mode: difference;
+  background-color: white;
+}
+
+
 html {
 	font-size: 14px;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -28,6 +74,8 @@ body {
 	margin: 0px;
 	background: white;
 	overflow-x: hidden;
+	cursor: none;
+
 }
 
 #scene {
@@ -224,6 +272,7 @@ i {
 .projects {
 	padding-top: 8rem;
 	padding-bottom: 10rem;
+	background: white;
 }
 
 .footer {

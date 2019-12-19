@@ -153,8 +153,6 @@ function followCursor() {
     });
 
     hoverTargets.forEach(function (hover) {
-        console.log("hereee");
-        
         hover.addEventListener("mouseenter", function () {
             followCursor.classList.add("is-active");
         });

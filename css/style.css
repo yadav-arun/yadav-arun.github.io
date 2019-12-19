@@ -393,6 +393,7 @@ i {
 
 .contact{
   /* padding-bottom: 8rem; */
+  background: white;
 }
 .credit{
   display: inline-flex;

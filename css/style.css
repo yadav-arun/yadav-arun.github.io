@@ -164,6 +164,19 @@ i {
 	background: linear-gradient(140deg, rgba(249,172,46,1) 0%, rgba(249,172,46,1) 54%, rgba(38,167,223,1) 54%, rgba(38,167,223,1) 100%);
 }
 
+.zenius {
+	background: #7c32a1;
+}
+
+.threye {
+	background: #3f4d62;
+}
+
+.about_me_content p {
+	line-height: 1.5em;
+}
+
+
 .company_name {
 	color: #fff;
 	font-weight: 400;
@@ -255,7 +268,7 @@ i {
 }
 
 .project {
-	width: 45%;
+	/* width: 45%; */
 	margin: 2.5%;
 	float: left;
 	display: grid;

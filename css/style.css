@@ -113,10 +113,15 @@ body {
 }
 
 .background_bl {
-	background: linear-gradient(51deg, #273b48 34%, white 34%);
+	/* background: linear-gradient(51deg, #273b48 34%, white 34%); */
 	/* background: linear-gradient(135deg, #000000 35% ,white 35%); */
-	/* background: url('../assets/header.png'); */
-	background-size: cover;
+	/* background-size: cover; */
+	/* background-image: url('../assets/arun-standing2.jpg'); */
+	background-repeat: no-repeat;
+	background-position: right;
+
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 38%, rgba(255, 255, 255) 52%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 71%, rgba(255, 255, 255, 0)), url('../assets/arun-standing2.jpg');
+	background-size: contain;
 }
 
 i {
@@ -135,7 +140,7 @@ i {
 	align-items: center;
 	/* padding-top: 16%;
     padding-bottom: 16%; */
-	background: url(../assets/header.png);
+	/* background: url(../assets/header.png); */
 	background-size: cover;
 	background-position: right;
 }
@@ -469,6 +474,14 @@ i {
 	transform: scale(1);
 	margin-bottom: 0px;
 }
+
+.background_bl {
+	background-image: url(../assets/arun-standing2.jpg);
+	background-repeat: no-repeat;
+	background-position: 79%;
+	background-size: auto;
+}
+
 
 }
 

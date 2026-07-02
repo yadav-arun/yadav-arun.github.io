@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
     <meta charset="UTF-8">
@@ -7,28 +7,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Arun Yadav">
     <meta name="description" content="Arun Yadav | Full Stack Developer , Philomath, Gallivanter">
-    
+
     <meta name="twitter:card" value="summary_large_image">
     <meta name="twitter:site" value="@arun111yadav">
     <meta name="twitter:creator" value="@arun111yadav">
     <meta name="twitter:title" content="Arun Yadav">
     <meta name="twitter:description" content="Arun Yadav | Full Stack Developer , Philomath, Gallivanter">
     <meta name="twitter:image" content="https://arunyadav.com/assets/meta.png">
-    
+
     <meta content="Arun Yadav" property="og:site_name">
     <meta content="Arun Yadav" property="og:title">
     <meta content="Arun Yadav | Full Stack Developer , Philomath, Gallivanter" property="og:description">
     <meta content="website" property="og:type">
     <meta content="https://arunyadav.com" property="og:url">
     <meta content="https://arunyadav.com/assets/meta.png" property="og:image">
-    
-    <meta name="theme-color" content="#273b48">
-    <meta name="msapplication-navbutton-color" content="#273b48">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#273b48">
+
+    <meta name="theme-color" content="#0a0e14">
+    <meta name="msapplication-navbutton-color" content="#0a0e14">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0a0e14">
     <title>Arun Yadav - Portfolio</title>
-    <!-- <link rel="stylesheet" href="./css/bootstrap.css"> -->
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0e14'/%3E%3Ctext x='32' y='44' font-family='Arial, sans-serif' font-size='34' font-weight='bold' text-anchor='middle' fill='%23ffb454'%3EA.%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
     <!-- Hotjar Tracking Code for https://arunyadav.com -->
     <script>
         (function (h, o, t, j, a, r) {
@@ -46,303 +54,450 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'UA-104625028-2');
     </script>
-
 </head>
 
 <body>
-    <div>
-        <section id="first" class="background_bl">
-            <div class="home_title">
-                <div class="home_title_helper">
-                    Hello, I am
-                </div>
-                <div class="home_title_main">
-                    Arun Yadav
+    <a class="skip-link" href="#about">Skip to content</a>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="nav" id="nav">
+        <a class="nav-logo" href="#home" aria-label="Home">AY<span class="accent">.</span></a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links" id="nav-links" aria-label="Primary">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="./Resume_Arun_Yadav.pdf" target="_blank" class="nav-cta">Resume</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="home">
+            <div class="hero-spot" aria-hidden="true"></div>
+            <div class="hero-inner">
+                <div class="hero-meta fade-up" style="--r:1s">
+                    <span class="hero-meta-item"><span class="pulse-dot" aria-hidden="true"></span>New Delhi, India</span>
+                    <span class="hero-meta-item hero-meta-mid">Currently building at Threye Interactive</span>
+                    <span class="hero-meta-item">IST <span id="ist-clock">--:--</span></span>
                 </div>
 
-                <div class="home_title_helper2">
-                    Full Stack Developer
-                    <br>
-                    Philomath
-                    <br>
-                    Gallivanter
-                    <br>
+                <h1 class="hero-title" aria-label="Arun Yadav">
+                    <span class="hero-line hero-line1" aria-hidden="true">
+                        <span class="mask"><span class="ch rise" style="--r:.12s">A</span></span>
+                        <span class="mask"><span class="ch rise" style="--r:.17s">R</span></span>
+                        <span class="mask"><span class="ch rise" style="--r:.22s">U</span></span>
+                        <span class="mask"><span class="ch rise" style="--r:.27s">N</span></span>
+                    </span>
+                    <span class="hero-line hero-line2" aria-hidden="true">
+                        <span class="mask chip-mask"><span class="rise hero-chip" style="--r:.4s"><img src="./assets/arun-standing2.jpg" alt="" fetchpriority="high" decoding="async"></span></span>
+                        <span class="mask"><span class="ch rise" style="--r:.5s">Y</span></span>
+                        <span class="mask"><span class="ch rise" style="--r:.55s">A</span></span>
+                        <span class="mask"><span class="ch rise" style="--r:.6s">D</span></span>
+                        <span class="mask"><span class="ch rise" style="--r:.65s">A</span></span>
+                        <span class="mask"><span class="ch rise" style="--r:.7s">V</span></span>
+                        <span class="mask"><span class="ch rise" style="--r:.75s">.</span></span>
+                    </span>
+                </h1>
+
+                <p class="hero-role fade-up" style="--r:.9s" aria-label="Full Stack Developer, Philomath, Gallivanter">
+                    <span class="paren">(</span>&nbsp;<span id="typewriter">Full Stack Developer</span><span class="caret" aria-hidden="true"></span>&nbsp;<span class="paren">)</span>
+                </p>
+
+                <div class="hero-foot">
+                    <p class="hero-tagline fade-up" style="--r:1.05s">
+                        I build products end-to-end &mdash; from embedded hardware to cloud
+                        backends to pixel-perfect frontends.
+                    </p>
+                    <div class="hero-actions fade-up" style="--r:1.15s">
+                        <a href="#projects" class="btn btn-primary">View my work <span class="btn-arrow" aria-hidden="true">&#8599;</span></a>
+                        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+                    </div>
                 </div>
             </div>
-            <canvas id="scene"></canvas>
+            <a class="scroll-hint fade-up" style="--r:1.4s" href="#about" aria-label="Scroll to About section">
+                <span class="scroll-hint-line" aria-hidden="true"></span>
+                <span class="scroll-hint-label">scroll</span>
+            </a>
         </section>
-        <section>
-            <div class="about_me">
-                <div class="container">
-                    <div class="about_me_title">About Me</div>
-                    <div class="about_me_content">
-                        <p>
-                            I'm Arun Yadav, a 29-year-old Full-Stack developer based in New Delhi, India. With over 7 years of experience in the software industry, I've had the opportunity to work on a different domain including <i>FinTech</i>, <i>MedTech</i>, <i>EdTech</i>, <i>Embedded Systems</i>, and <i>Aerospace & Defence</i>. This gave me opportunity to develop expertise in a range of technologies and frameworks, including Javascript, JAVA, Swift3, PHP, MySQL, MongoDB, AngularJS, Angular, NodeJS, Android, Ionic Framework, Jersey2.0, TweenMax, ExpressJS, SocketIO, WordPress, Magento, and Codeignitor.
-                        </p>
-                        <p>
-                            What I love most about my work is the opportunity to constantly learn and explore new domain and technologies. I'm always on the lookout for interesting challenges and opportunities to expand my skill set.
-                        </p>
-                        <p>
-                            In my previous roles, I've had the privilege of working with some truly brilliant minds, including at <a href="https://newgenpayments.com" target="_blank"
-                            class="company_name newgen"> <img class="company_img" src="./assets/company/newgen.png"
-                                alt="">Newgen Payments</a>, <a href="https://thelattice.in" target="_blank"
-                                class="company_name lattice">
-                                <img class="company_img" src="./assets/company/lattice.png" alt="">Lattice Innovations</a>, <a href="https://electronut.in" target="_blank" class="company_name electronut">
-                                    <img class="company_img" src="./assets/company/electronut.png" alt="">Electronut Labs</a>, <a href="https://simplilearn.com/" target="_blank" class="company_name simplilearn">
-                                        <img class="company_img" src="./assets/company/simplilearn.jpg" alt="">Simplilearn</a>, <a href="https://www.zenius.net/" target="_blank" class="company_name zenius">
-                                            <img class="company_img" src="./assets/company/zenius.png" alt="">Zenius</a>. Current, I am working at <a href="https://www.threye.com/" target="_blank" class="company_name threye">
-                                                <img class="company_img" src="./assets/company/threye.png" alt="">Threye Interactive</a>, where I am leading a talented group of developers and help them achieve their full potential.
-                        </p>
-                        <p>
-                            When I'm not coding, you can usually find me tinkering with hardware projects, or exploring the latest tech trends. I'm passionate about using technology to solve real-world problems, and I'm always excited to connect with others who share that vision.
-                        </p>
-                        <!-- <p>
-                            I’m a 29 year old philomath and a Full-Stack developer based in New Delhi, India. I’ve 7+
-                            years of professional experience.
-                            I have worked in payment industry at <a href="https://newgenpayments.com" target="_blank"
-                                class="company_name newgen"> <img class="company_img" src="./assets/company/newgen.png"
-                                    alt="">Newgen Payments</a>.
-                            Then I worked in Medical Technology company as Lead Software Developer at <a href="https://thelattice.in" target="_blank"
-                                class="company_name lattice">
-                                <img class="company_img" src="./assets/company/lattice.png" alt="">Lattice Innovations</a>. 
-                                Later swtiched to a new sector to explore, and joined Embedded Hardware System company 
-                                <a href="https://electronut.in" target="_blank" class="company_name electronut">
-                                <img class="company_img" src="./assets/company/electronut.png" alt="">Electronut Labs</a>.
-                            I had work with a group of brilliant Minds at <a href="https://simplilearn.com/" target="_blank" class="company_name simplilearn">
-                                <img class="company_img" src="./assets/company/simplilearn.jpg" alt="">Simplilearn</a> as and concluded as Team Lead.
 
-                        </p> -->
-                        <!-- <p>
-                            I love learning new technologies and interesting stuff.I have my professional expertise in
-                            <i>Javascript, JAVA, Swift3, PHP, MySQL, MongoDB</i>. Expertise in frameworks like : <i>AngularJS,
-                                Angular, NodeJS, Android, Ionic Framework, Jersey2.0, TweenMax, ExpressJS, SocketIO,
-                                WordPress, Magento, Codeignitor.</i>
-                        </p> -->
-                        <p class="xs-mt-30">
-                            <a href="https://www.linkedin.com/in/arun-yadav-888378125/" target="_blank" class="social_logo linkedin">
-                                <img class="social_img" src="./assets/social/linkedin.png" alt=""> LinkedIn</a>
-                            <a href="https://github.com/yadav-arun" target="_blank" class="social_logo github"> <img
-                                    class="social_img" src="./assets/social/github.png" alt=""> Github</a>
-                            <a href="https://www.facebook.com/arun111yadav" target="_blank" class="social_logo facebook">
-                                <img class="social_img" src="./assets/social/facebook.png" alt=""> Facebook</a>
-                            <a href="https://twitter.com/arun111yadav" target="_blank" class="social_logo twitter">
-                                <img class="social_img" src="./assets/social/twitter.png" alt=""> Twitter</a>
-                            <a href="./Resume_Arun_Yadav.pdf" target="_blank" class="social_logo resume"> <img class="social_img"
-                                    src="./assets/social/resume.png" alt=""> Resume</a>
-                        </p>
-                    </div>
-
+        <!-- ============ SKILLS MARQUEE ============ -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <span>JavaScript</span><span class="sep">&#10022;</span>
+                    <span>Java</span><span class="sep">&#10022;</span>
+                    <span>Swift</span><span class="sep">&#10022;</span>
+                    <span>Node.js</span><span class="sep">&#10022;</span>
+                    <span>Angular</span><span class="sep">&#10022;</span>
+                    <span>MySQL</span><span class="sep">&#10022;</span>
+                    <span>MongoDB</span><span class="sep">&#10022;</span>
+                    <span>Android</span><span class="sep">&#10022;</span>
+                    <span>iOS</span><span class="sep">&#10022;</span>
+                    <span>Express</span><span class="sep">&#10022;</span>
+                    <span>Socket.IO</span><span class="sep">&#10022;</span>
+                    <span>PHP</span><span class="sep">&#10022;</span>
+                    <span>WordPress</span><span class="sep">&#10022;</span>
+                    <span>Magento</span><span class="sep">&#10022;</span>
+                </div>
+                <div class="marquee-group">
+                    <span>JavaScript</span><span class="sep">&#10022;</span>
+                    <span>Java</span><span class="sep">&#10022;</span>
+                    <span>Swift</span><span class="sep">&#10022;</span>
+                    <span>Node.js</span><span class="sep">&#10022;</span>
+                    <span>Angular</span><span class="sep">&#10022;</span>
+                    <span>MySQL</span><span class="sep">&#10022;</span>
+                    <span>MongoDB</span><span class="sep">&#10022;</span>
+                    <span>Android</span><span class="sep">&#10022;</span>
+                    <span>iOS</span><span class="sep">&#10022;</span>
+                    <span>Express</span><span class="sep">&#10022;</span>
+                    <span>Socket.IO</span><span class="sep">&#10022;</span>
+                    <span>PHP</span><span class="sep">&#10022;</span>
+                    <span>WordPress</span><span class="sep">&#10022;</span>
+                    <span>Magento</span><span class="sep">&#10022;</span>
                 </div>
             </div>
+        </div>
 
+        <!-- ============ ABOUT ============ -->
+        <section class="about" id="about">
+            <div class="container">
+                <p class="section-eyebrow" data-reveal>01 &mdash; About me</p>
+                <h2 class="section-title" data-reveal>About Me</h2>
+                <div class="about_me_content">
+                    <p data-reveal>
+                        I'm Arun Yadav, a 32-year-old Full-Stack developer based in New Delhi, India. With over 10 years of experience in the software industry, I've had the opportunity to work on a different domain including <i>FinTech</i>, <i>MedTech</i>, <i>EdTech</i>, <i>Embedded Systems</i>, and <i>Aerospace &amp; Defence</i>. This gave me opportunity to develop expertise in a range of technologies and frameworks, including Javascript, JAVA, Swift3, PHP, MySQL, MongoDB, AngularJS, Angular, NodeJS, Android, Ionic Framework, Jersey2.0, TweenMax, ExpressJS, SocketIO, WordPress, Magento, and Codeignitor.
+                    </p>
+                    <p data-reveal>
+                        What I love most about my work is the opportunity to constantly learn and explore new domain and technologies. I'm always on the lookout for interesting challenges and opportunities to expand my skill set.
+                    </p>
+                    <p data-reveal>
+                        In my previous roles, I've had the privilege of working with some truly brilliant minds, including at <a href="https://newgenpayments.com" target="_blank" rel="noopener"
+                            class="company_name newgen"><img class="company_img" src="./assets/company/newgen.png" loading="lazy" decoding="async"
+                                alt="">Newgen Payments</a>, <a href="https://thelattice.in" target="_blank" rel="noopener"
+                            class="company_name lattice"><img class="company_img" src="./assets/company/lattice.png" loading="lazy" decoding="async" alt="">Lattice Innovations</a>, <a href="https://electronut.in" target="_blank" rel="noopener" class="company_name electronut"><img class="company_img" src="./assets/company/electronut.png" loading="lazy" decoding="async" alt="">Electronut Labs</a>, <a href="https://simplilearn.com/" target="_blank" rel="noopener" class="company_name simplilearn"><img class="company_img" src="./assets/company/simplilearn.jpg" loading="lazy" decoding="async" alt="">Simplilearn</a>, <a href="https://www.zenius.net/" target="_blank" rel="noopener" class="company_name zenius"><img class="company_img" src="./assets/company/zenius.png" loading="lazy" decoding="async" alt="">Zenius</a>. Currently, I am working at <a href="https://www.threye.com/" target="_blank" rel="noopener" class="company_name threye"><img class="company_img" src="./assets/company/threye.png" loading="lazy" decoding="async" alt="">Threye Interactive</a>, where I am leading a talented group of developers and help them achieve their full potential.
+                    </p>
+                    <p data-reveal>
+                        When I'm not coding, you can usually find me tinkering with hardware projects, or exploring the latest tech trends. I'm passionate about using technology to solve real-world problems, and I'm always excited to connect with others who share that vision.
+                    </p>
+                    <p class="social_row" data-reveal>
+                        <a href="https://www.linkedin.com/in/arun-yadav-888378125/" target="_blank" rel="noopener" class="social_logo linkedin">
+                            <img class="social_img" src="./assets/social/linkedin.png" loading="lazy" decoding="async" alt=""> LinkedIn</a>
+                        <a href="https://github.com/yadav-arun" target="_blank" rel="noopener" class="social_logo github">
+                            <img class="social_img" src="./assets/social/github.png" loading="lazy" decoding="async" alt=""> Github</a>
+                        <a href="https://www.facebook.com/arun111yadav" target="_blank" rel="noopener" class="social_logo facebook">
+                            <img class="social_img" src="./assets/social/facebook.png" loading="lazy" decoding="async" alt=""> Facebook</a>
+                        <a href="https://twitter.com/arun111yadav" target="_blank" rel="noopener" class="social_logo twitter">
+                            <img class="social_img" src="./assets/social/twitter.png" loading="lazy" decoding="async" alt=""> Twitter</a>
+                        <a href="./Resume_Arun_Yadav.pdf" target="_blank" class="social_logo resume">
+                            <img class="social_img" src="./assets/social/resume.png" loading="lazy" decoding="async" alt=""> Resume</a>
+                    </p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat" data-reveal style="--d:0s">
+                        <div class="stat-num"><span data-count="10">0</span>+</div>
+                        <div class="stat-label">Years of experience</div>
+                    </div>
+                    <div class="stat" data-reveal style="--d:.08s">
+                        <div class="stat-num"><span data-count="6">0</span></div>
+                        <div class="stat-label">Companies</div>
+                    </div>
+                    <div class="stat" data-reveal style="--d:.16s">
+                        <div class="stat-num"><span data-count="5">0</span></div>
+                        <div class="stat-label">Domains explored</div>
+                    </div>
+                    <div class="stat" data-reveal style="--d:.24s">
+                        <div class="stat-num"><span data-count="20">0</span>+</div>
+                        <div class="stat-label">Projects shipped</div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="projects">
-            <div class="projects_title">
-                Projects
-            </div>
-            <div class="container2">
-                <div class="project">
-                    <div class="project_img_div glowship_img">
-                    </div>
-                    <div class="project_title">
-                        Glowship Admin Web Application
-                    </div>
-                    <div class="project_tech">
-                        Angular6
-                    </div>
-                    <p class="project_desc">
-                        Worked on Admin interface for Glowship Solar solutions. This Admin panel contains placing of panels on drag and drop, visualisation of energy map from homeowner’s current power usage, and energy data from sun sensors placed at homeowner’s roof. Worked on this project while being part of Lattice Innovations. Role : System Design & Front end mockups.
-                    </p>
-                    <p class="footer">
-                    </p>
-                </div>
-                
-                <div class="project">
-                    <div class="project_img_div stryker_img">
-                    </div>
-                    <div class="project_title">
-                        Stryker NodeJs Backend
-                    </div>
-                    <div class="project_tech">
-                        NodeJS, ExpressJS, MYSQL
-                    </div>
-                    <p class="project_desc">
-                        NodeJS backend was built , which acts as a data bridge between an electronic bed and android application for doctors and nurses, and calculate adherence of the doctor’s plan. Worked on this project while being part of Lattice Innovations. Role : NodeJS backend development.
-                    </p>
-                    <p class="footer">
-                    </p>
-                </div>
-                
-                <div class="project">
-                    <div class="project_img_div commense_img">
-                    </div>
-                    <div class="project_title">
-                            Commense IOS Application
-                        </div>
-                        <div class="project_tech">
-                            Swift3 IOS Application Development
-                        </div>
-                        <p class="project_desc">
-                        Commense IOS application was one of the biggest challanges faced until now. The application was to be build in a span of 8 days, with learning IOS , swift , xcode from scratch and launching a production ready application in just a week. Worked on this project while being part of Lattice Innovations. Role : iOS Native Application development.
-                        </p>
-                        <p class="footer">
-                        </p>
-                    </div>
-                    <div class="project">
-                        <div class="project_img_div cip_img">
-                        </div>
-                        <div class="project_title">
-                            CAMTechMGH Innovation Platform (CIP)
-                         
-                        </div>
-                        <div class="project_tech">
-                            Codeignitor(PHP), AngularJS, Jersey Framework (JAVA), MYSQL
-                        </div>
-                        <p class="project_desc">
-                            The CAMTech Innovation Platform provides expertise, resources and targeted support to global health innovators. A 3+ year running project was kept in maintainence and a lot of features like Forum, User & Application management, Progress tracker were built from scratch. Worked on this project while being part of Lattice Innovations. Role : Full stack development.
-                        </p>
-                        <p class="footer">
-                        </p>
-                    </div>
-                    <div class="project">
-                        <div class="project_img_div newgen_backend_img">
-                        </div>
-                        <div class="project_title">
-                            Payment Gateway Middleware Backend
-                        </div>
-                        <div class="project_tech">
-                            NodeJS, ExpressJS, Google Analytics NodeJS Module
-                        </div>
-                        <p class="project_desc">
-                            Being a part in developing The NodeJS Gateway, Integration of Google Analytics NodeJS Module was done. Google charts are then rendered on Angular Dashboard. Apart from itself being a server it acts as a wrapper around all the other backend stuff. Worked on this project while being part of Newgen Payments. Role : NodeJS development.
-                        </p>
-                        <p class="footer">
-                        </p>
-                    </div>
-                    <div class="project">
-                        <div class="project_img_div newgen_admin_img">
-                        </div>
-                        <div class="project_title">
-                            Admin and Merchant Payment Panel
-                        </div>
-                        <div class="project_tech">
-                            AngularJS, SASS, Grunt, Bower, SocketIO
-                        </div>
-                        <p class="project_desc">
-                            A fully customizable dashboard in AngularJS with SocketIO for fast communication to the Node Gateway. The dashboard is responsive and uses Angular’s two way. Combining it with a messaging protocol like AMQP-0-9-1, a three way binding has been setup which reflects the data coming from back-end directly on the admin dashboard. Worked on this project while being part of Newgen Payments. Role : Angularjs frontend development.
-                        </p>
-                        <p class="footer">
-                        </p>
-                    </div>
-                    <div class="project">
-                        <div class="project_img_div antratek_img">
-                        </div>
-                        <div class="project_title">
-                            Webstore Website Revamp
-                        </div>
-                        <div class="project_tech">
-                            Magento Webstore(PHP), LESS, Bootstrap CSS
-                        </div>
-                        <p class="project_desc">
-                            Webstore for a merchant, distributor of innovative manufacturers in the field of embedded electronics, including microcontroller boards, development tools. Website was revamped and frontend was developed using HTML, LESS. Worked on this project while being part of Newgen Payments. Role : Frontend development.
-                        </p>
-                        <p class="footer">
-                        </p>
-                    </div>
-                    <div class="project">
-                        <div class="project_img_div boostsales_img">
-                        </div>
-                        <div class="project_title">
-                            Ecommerce solution Website
-                        </div>
-                        <div class="project_tech">
-                            Wordpress Website and JS Animation (TweenMax)
-                        </div>
-                        <p class="project_desc">
-                            A Website for fully-managed service provider that empowers E-Commerce merchants to optimize their web-stores and brand to boost conversions & online sales. SVG Animation on the website was created using TweenMax , Jquery, SVG and CSS. Worked on this project while being part of Newgen Payments. Role : Frontend Development.
-                        </p>
-                        <p class="footer">
-                        </p>
-                    </div>
-                    <div class="project">
-                        <div class="project_img_div brick2wall_img">
-                        </div>
-                        <div class="project_title">
-                            Brick2Wall Vendor App
-                        </div>
-                        <div class="project_tech">
-                            Android Studio (Android 4.4)
-                        </div>
-                        <p class="project_desc">
-                            Merchant facing Android Application that uses the Backend of Wordpress and uses API build on PHP to update prices of product on Daily basis. Role : Native Android Application Development.
-                        </p>
-                        <p class="footer">
-                        </p>
-                    </div>
-                    <!-- <div class="project">
-                        <div class="project_img_div">
-                        </div>
-                        <div class="project_title">
-                        </div>
-                        <div class="project_tech">
-                        </div>
-                        <p class="project_desc">
-                        </p>
-                        <p class="footer">
-                        </p>
-                    </div> -->
-            </div>
-            
 
-            
+        <!-- ============ PROJECTS ============ -->
+        <section class="projects" id="projects">
+            <div class="container-wide">
+                <p class="section-eyebrow" data-reveal>02 &mdash; Selected work</p>
+                <h2 class="section-title" data-reveal>Projects</h2>
+                <p class="section-sub" data-reveal>
+                    A few favourites from over the years &mdash; a small slice of everything I've shipped across six companies. Click a row to dive in.
+                </p>
+
+                <div class="plist">
+                    <article class="plist-item open" data-reveal data-img="./assets/projects/glowship.jpg">
+                        <button class="plist-head" id="proj-1-btn" aria-expanded="true" aria-controls="proj-1">
+                            <span class="plist-index">01</span>
+                            <span class="plist-titles">
+                                <span class="plist-name">Glowship Admin Web Application</span>
+                                <span class="plist-meta">Lattice Innovations &middot; System design &amp; front-end</span>
+                            </span>
+                            <span class="plist-tech">Angular 6</span>
+                            <span class="plist-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="plist-body" id="proj-1" role="region" aria-labelledby="proj-1-btn">
+                            <div class="plist-body-inner">
+                                <div class="plist-body-grid">
+                                    <div class="plist-media">
+                                        <img src="./assets/projects/glowship.jpg" alt="Solar panels for the Glowship project" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="plist-desc">
+                                        <p>Admin interface for Glowship solar solutions &mdash; drag-and-drop panel placement, an energy map visualising the homeowner's power usage, and live energy data from sun sensors on the roof.</p>
+                                        <div class="plist-tags"><span class="tag">Angular 6</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="plist-item" data-reveal data-img="./assets/projects/stryker.jpg">
+                        <button class="plist-head" id="proj-2-btn" aria-expanded="false" aria-controls="proj-2">
+                            <span class="plist-index">02</span>
+                            <span class="plist-titles">
+                                <span class="plist-name">Stryker Node.js Backend</span>
+                                <span class="plist-meta">Lattice Innovations &middot; Backend development</span>
+                            </span>
+                            <span class="plist-tech">Node.js &middot; Express &middot; MySQL</span>
+                            <span class="plist-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="plist-body" id="proj-2" role="region" aria-labelledby="proj-2-btn">
+                            <div class="plist-body-inner">
+                                <div class="plist-body-grid">
+                                    <div class="plist-media">
+                                        <img src="./assets/projects/stryker.jpg" alt="Stryker electronic bed project" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="plist-desc">
+                                        <p>A backend acting as a data bridge between an electronic bed and an Android app for doctors and nurses, calculating adherence to the doctor's care plan.</p>
+                                        <div class="plist-tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MySQL</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="plist-item" data-reveal data-img="./assets/projects/commense.jpg">
+                        <button class="plist-head" id="proj-3-btn" aria-expanded="false" aria-controls="proj-3">
+                            <span class="plist-index">03</span>
+                            <span class="plist-titles">
+                                <span class="plist-name">Commense iOS Application</span>
+                                <span class="plist-meta">Lattice Innovations &middot; iOS development</span>
+                            </span>
+                            <span class="plist-tech">Swift 3 &middot; iOS</span>
+                            <span class="plist-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="plist-body" id="proj-3" role="region" aria-labelledby="proj-3-btn">
+                            <div class="plist-body-inner">
+                                <div class="plist-body-grid">
+                                    <div class="plist-media">
+                                        <img src="./assets/projects/commense.jpg" alt="Commense iOS application" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="plist-desc">
+                                        <p>One of the biggest challenges faced until now &mdash; learning iOS, Swift and Xcode from scratch and launching a production-ready application in a span of just 8 days.</p>
+                                        <div class="plist-tags"><span class="tag">Swift 3</span><span class="tag">iOS</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="plist-item" data-reveal data-img="./assets/projects/cip.jpg">
+                        <button class="plist-head" id="proj-4-btn" aria-expanded="false" aria-controls="proj-4">
+                            <span class="plist-index">04</span>
+                            <span class="plist-titles">
+                                <span class="plist-name">CAMTechMGH Innovation Platform</span>
+                                <span class="plist-meta">Lattice Innovations &middot; Full-stack development</span>
+                            </span>
+                            <span class="plist-tech">PHP &middot; AngularJS &middot; Java</span>
+                            <span class="plist-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="plist-body" id="proj-4" role="region" aria-labelledby="proj-4-btn">
+                            <div class="plist-body-inner">
+                                <div class="plist-body-grid">
+                                    <div class="plist-media">
+                                        <img src="./assets/projects/cip.jpg" alt="CAMTech Innovation Platform" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="plist-desc">
+                                        <p>A platform providing expertise, resources and targeted support to global health innovators. Maintained a 3+ year running project and built Forum, User &amp; Application management, and Progress tracker from scratch.</p>
+                                        <div class="plist-tags"><span class="tag">CodeIgniter</span><span class="tag">AngularJS</span><span class="tag">Jersey (Java)</span><span class="tag">MySQL</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="plist-item" data-reveal data-img="./assets/projects/newgen_backend.jpg">
+                        <button class="plist-head" id="proj-5-btn" aria-expanded="false" aria-controls="proj-5">
+                            <span class="plist-index">05</span>
+                            <span class="plist-titles">
+                                <span class="plist-name">Payment Gateway Middleware Backend</span>
+                                <span class="plist-meta">Newgen Payments &middot; Node.js development</span>
+                            </span>
+                            <span class="plist-tech">Node.js &middot; Express</span>
+                            <span class="plist-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="plist-body" id="proj-5" role="region" aria-labelledby="proj-5-btn">
+                            <div class="plist-body-inner">
+                                <div class="plist-body-grid">
+                                    <div class="plist-media">
+                                        <img src="./assets/projects/newgen_backend.jpg" alt="Payment gateway middleware backend" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="plist-desc">
+                                        <p>A Node.js gateway that wraps all the other backend services, with the Google Analytics module integrated and rendered as charts on an Angular dashboard.</p>
+                                        <div class="plist-tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Google Analytics</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="plist-item" data-reveal data-img="./assets/projects/newgen_admin.jpg">
+                        <button class="plist-head" id="proj-6-btn" aria-expanded="false" aria-controls="proj-6">
+                            <span class="plist-index">06</span>
+                            <span class="plist-titles">
+                                <span class="plist-name">Admin &amp; Merchant Payment Panel</span>
+                                <span class="plist-meta">Newgen Payments &middot; AngularJS front-end</span>
+                            </span>
+                            <span class="plist-tech">AngularJS &middot; Socket.IO</span>
+                            <span class="plist-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="plist-body" id="proj-6" role="region" aria-labelledby="proj-6-btn">
+                            <div class="plist-body-inner">
+                                <div class="plist-body-grid">
+                                    <div class="plist-media">
+                                        <img src="./assets/projects/newgen_admin.jpg" alt="Admin and merchant payment panel" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="plist-desc">
+                                        <p>A fully customisable dashboard with Socket.IO for fast communication with the Node gateway. Combined with AMQP messaging, a three-way binding reflects backend data live on the dashboard.</p>
+                                        <div class="plist-tags"><span class="tag">AngularJS</span><span class="tag">SASS</span><span class="tag">Socket.IO</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="plist-item" data-reveal data-img="./assets/projects/antratek.jpg">
+                        <button class="plist-head" id="proj-7-btn" aria-expanded="false" aria-controls="proj-7">
+                            <span class="plist-index">07</span>
+                            <span class="plist-titles">
+                                <span class="plist-name">Webstore Website Revamp</span>
+                                <span class="plist-meta">Newgen Payments &middot; Front-end development</span>
+                            </span>
+                            <span class="plist-tech">Magento &middot; LESS</span>
+                            <span class="plist-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="plist-body" id="proj-7" role="region" aria-labelledby="proj-7-btn">
+                            <div class="plist-body-inner">
+                                <div class="plist-body-grid">
+                                    <div class="plist-media">
+                                        <img src="./assets/projects/antratek.jpg" alt="Antratek webstore" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="plist-desc">
+                                        <p>Webstore revamp for a distributor of innovative embedded-electronics manufacturers &mdash; microcontroller boards, development tools and more &mdash; with the front-end rebuilt in HTML and LESS.</p>
+                                        <div class="plist-tags"><span class="tag">Magento</span><span class="tag">LESS</span><span class="tag">Bootstrap</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="plist-item" data-reveal data-img="./assets/projects/boostsales.jpg">
+                        <button class="plist-head" id="proj-8-btn" aria-expanded="false" aria-controls="proj-8">
+                            <span class="plist-index">08</span>
+                            <span class="plist-titles">
+                                <span class="plist-name">E-commerce Solution Website</span>
+                                <span class="plist-meta">Newgen Payments &middot; Front-end development</span>
+                            </span>
+                            <span class="plist-tech">WordPress &middot; TweenMax</span>
+                            <span class="plist-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="plist-body" id="proj-8" role="region" aria-labelledby="proj-8-btn">
+                            <div class="plist-body-inner">
+                                <div class="plist-body-grid">
+                                    <div class="plist-media">
+                                        <img src="./assets/projects/boostsales.jpg" alt="E-commerce solution website" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="plist-desc">
+                                        <p>Website for a fully-managed service provider that empowers e-commerce merchants to boost conversions and online sales, with SVG animations crafted using TweenMax, jQuery and CSS.</p>
+                                        <div class="plist-tags"><span class="tag">WordPress</span><span class="tag">TweenMax</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="plist-item" data-reveal data-img="./assets/projects/brick2wall.jpg">
+                        <button class="plist-head" id="proj-9-btn" aria-expanded="false" aria-controls="proj-9">
+                            <span class="plist-index">09</span>
+                            <span class="plist-titles">
+                                <span class="plist-name">Brick2Wall Vendor App</span>
+                                <span class="plist-meta">Native Android application development</span>
+                            </span>
+                            <span class="plist-tech">Android</span>
+                            <span class="plist-toggle" aria-hidden="true"></span>
+                        </button>
+                        <div class="plist-body" id="proj-9" role="region" aria-labelledby="proj-9-btn">
+                            <div class="plist-body-inner">
+                                <div class="plist-body-grid">
+                                    <div class="plist-media">
+                                        <img src="./assets/projects/brick2wall.jpg" alt="Brick2Wall vendor app" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="plist-desc">
+                                        <p>Merchant-facing Android application backed by WordPress, using an API built on PHP to update product prices on a daily basis.</p>
+                                        <div class="plist-tags"><span class="tag">Android</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="plist-preview" aria-hidden="true">
+                    <div class="plist-preview-inner"><img src="./assets/projects/glowship.jpg" alt=""></div>
+                </div>
+            </div>
         </section>
-        <section class="contact">
-            <div class="container2">
-                <div class="more_on">
+
+        <!-- ============ CONTACT ============ -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <p class="section-eyebrow" data-reveal>03 &mdash; Contact</p>
+                <h2 class="contact-title" data-reveal>Let's build something <span class="grad">awesome</span> together.</h2>
+                <p class="contact-sub" data-reveal>Mail me [at]</p>
+                <a class="contact-email" data-reveal href="mailto:hello@arunyadav.com?Subject=Hello%20Arun">hello@arunyadav.com <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                <p class="contact-more" data-reveal>
                     Know more about me at
-                    <a href="https://github.com/yadav-arun" target="_blank" class="social_logo github">
-                        <img class="social_img" src="./assets/social/github.png" alt=""> Github</a>
-                        and 
-                        <a href="https://www.linkedin.com/in/arun-yadav-888378125/" target="_blank" class="social_logo linkedin">
-                            <img class="social_img" src="./assets/social/linkedin.png" alt=""> LinkedIn</a>
-                    <!-- <a target="_blank" href="https://github.com/yadav-arun">Github</a> and LinkedIn -->
-                    <p>Mail me [at]  <a href="mailto:hello@arunyadav.com?Subject=Hello%20Arun">hello@arunyadav.com</a></p>
-                </div>
+                    <a href="https://github.com/yadav-arun" target="_blank" rel="noopener" class="social_logo github">
+                        <img class="social_img" src="./assets/social/github.png" loading="lazy" decoding="async" alt=""> Github</a>
+                    and
+                    <a href="https://www.linkedin.com/in/arun-yadav-888378125/" target="_blank" rel="noopener" class="social_logo linkedin">
+                        <img class="social_img" src="./assets/social/linkedin.png" loading="lazy" decoding="async" alt=""> LinkedIn</a>
+                </p>
             </div>
-                    <div class=" foot_back">
-                        <div class="credit">
-                            Designed and Coded by <a class="" href="https://arunyadav.com">Arun Yadav</a>  | Made with <p class="heart">❤</p> in India
-                        </div>
-                    </div>
         </section>
-    </div>
-    <div id='main-cursor'></div>
-    <div id='follow-cursor'></div>
+    </main>
+
+    <footer class="footer">
+        <div class="credit">
+            Designed and Coded by <a href="https://arunyadav.com">Arun Yadav</a>
+            <span class="dot-sep">&middot;</span> Made with <span class="heart">&#10084;</span> in India
+        </div>
+    </footer>
+
+    <button id="to-top" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <div id="cursor-dot" aria-hidden="true"></div>
+    <div id="cursor-ring" aria-hidden="true"></div>
+
+    <script src="./js/main.js" defer></script>
 </body>
-<script src="js/main.js"></script>
-<script>
-    function setBannerViewPort() {
-        $('.background_bl').height(window.innerHeight)
-    }
-
-
-    $(window).on('load', function () {
-        setBannerViewPort()
-        $(window).resize(setBannerViewPort)
-
-
-        if (window.navigator.platform.match(/win/ig)) {
-            $('body').addClass('windows')
-        }
-    })
-
-    $(window).on('scroll', function () {
-        var scroll = $(window).scrollTop();
-        // $('#first').css('background', 'linear-gradient(' + (51 + scroll / 10) + 'deg, #273b48    ' + (34 + scroll / 10) + '% , white ' + (34 + scroll / 10) + '%)')
-    })
-</script>
 
 </html>
